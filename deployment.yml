@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wisecow-deployment
+  name: vinod-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: wisecow
+      app: vinod
   template:
     metadata:
       labels:
-        app: wisecow
+        app: vinod
     spec:
       containers:
-      - name: wisecow-app
-        image: wisecow-app:latest
+      - name: vinod-app
+        image: vinodkhathi/vinod-img:v1
         ports:
-        - containerPort: 3000
+        - containerPort: 8080

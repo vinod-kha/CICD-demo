@@ -1,16 +1,10 @@
-FROM node:14
+FROM ubuntu:latest
 
-WORKDIR /app
+RUN apt-get update && \
+    apt-get install -y fortune cowsay netcat
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY wisecow.sh /wisecow.sh
 
-# Install dependencies
-RUN npm install
+EXPOSE 4499
 
-COPY . .
-
-# Expose port 3000
-EXPOSE 3000
-
-CMD ["npm", "start"]
+CMD ["bash", "/wisecow.sh"]
