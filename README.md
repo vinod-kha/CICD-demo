@@ -1,7 +1,3 @@
-Certainly! Here's an example README.md file for your containerized WiseCow application deployed in Kubernetes using Git, Jenkins, Docker, and Kubernetes:
-
----
-
 # WiseCow Application Deployment
 
 This repository contains the deployment files and instructions for deploying the WiseCow application in a Kubernetes cluster using Git, Jenkins, Docker, and Kubernetes.
